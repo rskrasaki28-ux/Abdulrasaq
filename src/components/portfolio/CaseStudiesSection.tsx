@@ -36,13 +36,12 @@ const CASE_STUDIES: CaseStudy[] = [
   },
   {
     number: '03',
-    title: 'Building a Mobile Travel Booking Platform for Sports Teams',
-    subtitle: 'Purpose-built logistics for rosters, budgets, and match schedules.',
-    problem: `Coordinating travel for a sports team — flights, hotels, ground transport, itineraries — across a full roster is a logistical challenge that generic booking platforms are not built for. Group bookings, budget tracking, and schedule alignment typically require a coordinator manually stitching together multiple tools, which is slow, error-prone, and does not scale.`,
-    process: `Currently designing and building a mobile-first travel booking application purpose-built for sports teams. The platform centralises group booking, automates itinerary assembly, and aligns travel logistics with match and training schedules — removing the coordination overhead that typically falls on team staff.`,
-    outcome: `In progress — results and metrics to be published on launch.`,
-    tags: ['Mobile App', 'Travel Automation', 'Process Design', 'React Native'],
-    inProgress: true,
+    title: 'Eliminating 70% of HR Admin Through End-to-End Onboarding Automation',
+    subtitle: 'From manual chasing to a self-running pipeline.',
+    problem: `Sports Media Inc. was manually managing every step of their intern onboarding process. HR was responsible for collecting applications, chasing documents, scheduling interviews, sending outcome notifications, updating Salesforce records, and provisioning system access — all done by hand, one candidate at a time. As the intern programme scaled, this created a bottleneck that consumed the majority of the team's working hours while still producing inconsistent candidate experiences and frequent delays.`,
+    process: `I mapped the full onboarding lifecycle from application submission through to first-day access provisioning, then designed and built an automated workflow solution that removed manual intervention at every stage. The system automatically creates candidate records in Salesforce upon application receipt, triggers document collection sequences with built-in follow-up logic, books interviews via calendar integration without scheduling back-and-forth, sends outcome notifications based on pipeline stage progressions, and provisions system access once an intern is confirmed. Each stage triggers the next automatically, with Salesforce updated in real time throughout — no manual input required at any point.`,
+    outcome: `HR workload on onboarding-related admin was reduced by 70%, measured directly against the team's pre-automation weekly hours. The team no longer chases documents, manually schedules interviews, or performs any data entry. The process now runs unsupervised from application to onboarded — and candidate response times dropped from days to minutes, significantly improving the applicant experience.`,
+    tags: ['Workflow Automation', 'CRM Integration', 'Salesforce', 'Process Design', 'HR Tech'],
   },
 ];
 

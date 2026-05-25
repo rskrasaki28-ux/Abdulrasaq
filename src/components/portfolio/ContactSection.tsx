@@ -252,21 +252,34 @@ export default function ContactSection() {
 
         {/* ── Footer */}
         <div
-          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-20 pt-8"
+          className="flex flex-col gap-6 mt-20 pt-8"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <a
-            href="mailto:Abdulrasaq.Agboluaje@gmail.com"
-            className="text-xs no-underline transition-colors duration-200"
-            style={{ color: 'rgba(225,224,204,0.35)' }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
-          >
-            Abdulrasaq.Agboluaje@gmail.com
-          </a>
-          <p className="text-[10px] m-0" style={{ color: 'rgba(225,224,204,0.2)' }}>
-            © 2025 Abdulrasaq Agboluaje
-          </p>
+          {/* Availability badge */}
+          <div className="flex items-center gap-2">
+            <span
+              className="w-2 h-2 rounded-full flex-shrink-0"
+              style={{ background: '#2acd8a', boxShadow: '0 0 6px #2acd8a88' }}
+            />
+            <span className="text-xs tracking-wide" style={{ color: 'rgba(225,224,204,0.55)' }}>
+              Available for <span style={{ color: '#E1E0CC' }}>contract</span> and <span style={{ color: '#E1E0CC' }}>full-time</span> roles
+            </span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <a
+              href="mailto:Abdulrasaq.Agboluaje@gmail.com"
+              className="text-xs no-underline transition-colors duration-200"
+              style={{ color: 'rgba(225,224,204,0.35)' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
+            >
+              Abdulrasaq.Agboluaje@gmail.com
+            </a>
+            <p className="text-[10px] m-0" style={{ color: 'rgba(225,224,204,0.2)' }}>
+              © 2025 Abdulrasaq Agboluaje
+            </p>
+          </div>
         </div>
       </div>
     </section>
