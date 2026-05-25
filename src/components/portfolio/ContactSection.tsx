@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
-import { Linkedin } from 'lucide-react';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -287,7 +287,7 @@ export default function ContactSection() {
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
               >
-                <Linkedin size={13} />
+                <FaLinkedinIn size={13} />
                 LinkedIn
               </a>
             </div>
