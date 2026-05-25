@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
+import { Linkedin } from 'lucide-react';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -267,15 +268,29 @@ export default function ContactSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <a
-              href="mailto:Abdulrasaq.Agboluaje@gmail.com"
-              className="text-xs no-underline transition-colors duration-200"
-              style={{ color: 'rgba(225,224,204,0.35)' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
-            >
-              Abdulrasaq.Agboluaje@gmail.com
-            </a>
+            <div className="flex items-center gap-5">
+              <a
+                href="mailto:Abdulrasaq.Agboluaje@gmail.com"
+                className="text-xs no-underline transition-colors duration-200"
+                style={{ color: 'rgba(225,224,204,0.35)' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
+              >
+                Abdulrasaq.Agboluaje@gmail.com
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abdulrasaq-agboluaje-ab7296157"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs no-underline transition-colors duration-200"
+                style={{ color: 'rgba(225,224,204,0.35)' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
+              >
+                <Linkedin size={13} />
+                LinkedIn
+              </a>
+            </div>
             <p className="text-[10px] m-0" style={{ color: 'rgba(225,224,204,0.2)' }}>
               © 2025 Abdulrasaq Agboluaje
             </p>
