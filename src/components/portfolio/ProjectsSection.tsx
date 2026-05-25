@@ -256,7 +256,7 @@ const PROJECTS: Project[] = [
     tagline: 'Zero-touch merchandise fulfilment between an athlete platform and a POD store.',
     description: `Every order previously required manual data entry across two disconnected platforms. I built an automation layer that fires purchase triggers from the athlete app directly into the POD store workflow, carrying the correct product, size, and shipping data — with status updates syncing back automatically.`,
     stack: ['API Integration', 'Workflow Automation', 'E-Commerce', 'Webhooks'],
-    year: '2024',
+    year: '2025',
     gradient: 'from-[#0a1f18] via-[#071510] to-[#040e09]',
     accentColor: '#2acd8a',
     processData: {
