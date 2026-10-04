@@ -270,13 +270,13 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-5">
               <a
-                href="mailto:Abdulrasaq.Agboluaje@gmail.com"
+                href="mailto:Abdulrasaq.Agboluaje@outlook.com"
                 className="text-xs no-underline transition-colors duration-200"
                 style={{ color: 'rgba(225,224,204,0.35)' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.35)')}
               >
-                Abdulrasaq.Agboluaje@gmail.com
+                Abdulrasaq.Agboluaje@outlook.com
               </a>
               <a
                 href="https://www.linkedin.com/in/abdulrasaq-agboluaje-ab7296157"
