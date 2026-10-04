@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { ProcessDiagramModal, type ProcessData } from './ProcessDiagramModal';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -18,6 +18,7 @@ interface Project {
   badge?: string;
   stat?: { value: string; label: string };
   processData?: ProcessData;
+  link?: string;
 }
 
 const PROJECTS: Project[] = [
@@ -31,6 +32,7 @@ const PROJECTS: Project[] = [
     year: '2026',
     gradient: 'from-[#0b1a2e] via-[#091422] to-[#050d18]',
     accentColor: '#4a8cff',
+    link: 'https://dakdan.ai',
     processData: {
       asIs: {
         summary: 'The team manually monitored portals every morning, wrote proposals from scratch over multiple days, and lost winnable contracts simply because there were not enough hours.',
@@ -176,75 +178,28 @@ const PROJECTS: Project[] = [
   },
   {
     id: '03',
-    name: 'Marketing Lead Engine',
-    company: 'Sports Media Inc.',
-    tagline: 'Automated marketing workflows that doubled engagement and grew the lead pipeline.',
-    description: `Marketing was running manual email campaigns with no segmentation, no nurture logic, and no consistent follow-up. I implemented and managed a full marketing automation platform — building automated workflows, integrating the CRM for audience sync, and building test plans to validate data accuracy across every stage of the funnel.`,
-    stack: ['Marketing Automation', 'Email Campaigns', 'Audience Segmentation', 'CRM', 'Python'],
-    year: '2024',
+    name: 'AI Lead Generator & Enrichment Tool',
+    company: 'Independent',
+    tagline: 'Automated lead sourcing and CRM enrichment, built in Python.',
+    description: `Sales teams were manually researching and entering lead data into the CRM one contact at a time. I built a Python pipeline that sources leads automatically and enriches each record before it ever reaches a rep, so the CRM stays current without manual data entry.`,
+    stack: ['Python', 'CRM Integration', 'Lead Enrichment'],
+    year: '2026',
     gradient: 'from-[#1a0a0e] via-[#120007] to-[#080003]',
     accentColor: '#f43f5e',
-    stat: { value: '42%', label: 'increase in lead generation' },
+    link: 'https://crm.usaev.net',
     processData: {
       asIs: {
-        summary: 'Marketing sent identical blasts to the full list with no segmentation, no nurture, and no insight — leads went cold after the first email and campaigns repeated regardless of results.',
+        summary: 'Leads were sourced and entered into the CRM by hand, one at a time, with enrichment data gathered manually from separate tools.',
         steps: [
-          {
-            label: 'Marketing team manually builds campaign',
-            pain: 'Hours of manual setup — repeated from scratch each time',
-          },
-          {
-            label: 'Single email blast sent to full contact list',
-            pain: 'No segmentation — irrelevant to the majority of recipients',
-          },
-          {
-            label: 'No follow-up or nurture sequence',
-            pain: 'Leads go cold after the first touchpoint',
-          },
-          {
-            label: 'Responses manually logged in CRM',
-            pain: 'Delayed, inaccurate data entry — pipeline data unreliable',
-          },
-          {
-            label: 'No A/B testing or performance analysis',
-            pain: 'Same underperforming approach repeated every campaign',
-          },
-          {
-            label: 'Pipeline stagnates — leads fail to convert',
-            pain: '42% below lead generation potential',
-          },
+          { label: 'Rep manually searches for and copies lead data', pain: 'Hours spent per batch, inconsistent data quality' },
+          { label: 'Rep manually enriches each record before outreach', pain: 'Enrichment skipped under time pressure' },
         ],
       },
       toBe: {
-        summary: 'A full marketing automation platform now segments leads, runs multi-stage nurture flows, syncs the CRM in real time, and continuously optimises — delivering a 42% lift in qualified lead generation.',
+        summary: 'Leads are sourced and enriched automatically before they reach a rep, keeping the CRM current with zero manual research.',
         steps: [
-          {
-            label: 'Lead enters the system',
-          },
-          {
-            label: 'Auto-segmented by behaviour, interest & profile',
-            gain: 'Hyper-relevant content delivered to each segment',
-          },
-          {
-            label: 'Automated nurture workflow triggered',
-            gain: 'Consistent follow-up at the right cadence — automatically',
-          },
-          {
-            label: 'CRM auto-synced at every interaction point',
-            gain: 'Real-time lead intelligence — zero manual data entry',
-          },
-          {
-            label: 'A/B test results auto-analysed after each cycle',
-            gain: 'Every iteration improves on the last',
-          },
-          {
-            label: 'High-intent leads auto-flagged for sales outreach',
-            gain: 'Sales reaches the right lead at the right moment',
-          },
-          {
-            label: '42% increase in qualified lead generation',
-            gain: 'Compounding returns with every campaign cycle',
-          },
+          { label: 'Pipeline sources new leads automatically', gain: 'Consistent lead flow with no manual searching' },
+          { label: 'Each record auto-enriched before it hits the CRM', gain: 'Reps get complete, ready-to-use records every time' },
         ],
       },
     },
@@ -254,8 +209,8 @@ const PROJECTS: Project[] = [
     name: 'Athlete App × POD Store',
     company: 'Independent',
     tagline: 'Zero-touch merchandise fulfilment between an athlete platform and a POD store.',
-    description: `Every order previously required manual data entry across two disconnected platforms. I built an automation layer that fires purchase triggers from the athlete app directly into the POD store workflow, carrying the correct product, size, and shipping data — with status updates syncing back automatically.`,
-    stack: ['API Integration', 'Workflow Automation', 'E-Commerce', 'Webhooks'],
+    description: `Every order previously required manual data entry across two disconnected platforms. I built a Next.js integration layer that connects the athlete app directly into Printful's print-on-demand API, carrying the correct product, size, and shipping data on every purchase trigger — with fulfilment status syncing back automatically.`,
+    stack: ['Next.js', 'Printful API', 'Workflow Automation', 'Webhooks'],
     year: '2025',
     gradient: 'from-[#0a1f18] via-[#071510] to-[#040e09]',
     accentColor: '#2acd8a',
@@ -331,6 +286,7 @@ const PROJECTS: Project[] = [
     year: '2026',
     gradient: 'from-[#0a1f0e] via-[#071508] to-[#040e04]',
     accentColor: '#4ade80',
+    link: 'https://grantrt.com',
     processData: {
       asIs: {
         summary: 'Grant opportunities and their compliance deadlines were tracked manually, so organizations missed funding windows and risked falling out of compliance without noticing.',
@@ -434,33 +390,6 @@ const PROJECTS: Project[] = [
   },
   {
     id: '09',
-    name: 'AI Lead Generator & Enrichment Tool',
-    company: 'Independent',
-    tagline: 'Automated lead sourcing and CRM enrichment, built in Python.',
-    description: `Sales teams were manually researching and entering lead data into the CRM one contact at a time. I built a Python pipeline that sources leads automatically and enriches each record before it ever reaches a rep, so the CRM stays current without manual data entry.`,
-    stack: ['Python', 'CRM Integration', 'Lead Enrichment'],
-    year: '2025',
-    gradient: 'from-[#1f0a1a] via-[#150712] to-[#0e040b]',
-    accentColor: '#e879f9',
-    processData: {
-      asIs: {
-        summary: 'Leads were sourced and entered into the CRM by hand, one at a time, with enrichment data gathered manually from separate tools.',
-        steps: [
-          { label: 'Rep manually searches for and copies lead data', pain: 'Hours spent per batch, inconsistent data quality' },
-          { label: 'Rep manually enriches each record before outreach', pain: 'Enrichment skipped under time pressure' },
-        ],
-      },
-      toBe: {
-        summary: 'Leads are sourced and enriched automatically before they reach a rep, keeping the CRM current with zero manual research.',
-        steps: [
-          { label: 'Pipeline sources new leads automatically', gain: 'Consistent lead flow with no manual searching' },
-          { label: 'Each record auto-enriched before it hits the CRM', gain: 'Reps get complete, ready-to-use records every time' },
-        ],
-      },
-    },
-  },
-  {
-    id: '10',
     name: 'Pure Box Water',
     company: 'Client',
     tagline: 'A full e-commerce rebuild, migrated off WordPress.',
@@ -487,7 +416,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    id: '11',
+    id: '10',
     name: 'Internship Application System',
     company: 'Sports Media Inc.',
     tagline: 'Internal tooling for application intake and staff operations.',
@@ -496,6 +425,30 @@ const PROJECTS: Project[] = [
     year: '2024',
     gradient: 'from-[#1a0d00] via-[#120900] to-[#070400]',
     accentColor: '#fb923c',
+  },
+  {
+    id: '11',
+    name: 'Brand Managers',
+    company: 'Independent',
+    tagline: 'A connected learning platform built from one source document per subject.',
+    description: `Brand management training was scattered across disconnected courses, dated textbooks, and separate software. I helped build a platform where every subject starts as a single authoritative source document and generates the full course, a working toolkit (spreadsheets, workbooks, slide decks, prompt packs, exams), and an AI knowledge base indexed to answer only from that source — so a correction in one place propagates through everything downstream.`,
+    stack: ['Web Platform', 'AI-Generated Content', 'Education'],
+    year: '2026',
+    gradient: 'from-[#1a140a] via-[#120d07] to-[#0a0704]',
+    accentColor: '#eab308',
+    link: 'https://brandmanagers.ai',
+  },
+  {
+    id: '12',
+    name: 'Dakdan Academy',
+    company: 'Dakdan Worldwide',
+    tagline: 'Career training programs that route competitive esports players into high-discipline careers.',
+    description: `Dakdan Academy trains high-performing esports athletes for careers that reward the same reflexes competitive gaming builds — sustained attention, pattern recognition, and calm decisions under pressure. I helped build the training platform and account system behind its first live program, Air Traffic Control, with Emergency Dispatcher and Drone/UAS Pilot tracks following.`,
+    stack: ['Web Platform', 'Account System', 'Training Programs'],
+    year: '2026',
+    gradient: 'from-[#0a1420] via-[#070d16] to-[#04070b]',
+    accentColor: '#38bdf8',
+    link: 'https://academy.dakdan.com',
   },
 ];
 
@@ -605,22 +558,40 @@ function ProjectCard({
             {project.year}
           </span>
 
-          {project.processData ? (
-            <button
-              onClick={onViewProject}
-              className="flex items-center gap-1.5 text-[11px] transition-all duration-200 group-hover:gap-2.5 bg-transparent border-none cursor-pointer p-0"
-              style={{ color: 'rgba(225,224,204,0.45)' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.45)')}
-            >
-              View project
-              <ArrowRight size={11} style={{ transform: 'rotate(-45deg)' }} />
-            </button>
-          ) : (
-            <span className="text-[10px] tracking-widest italic" style={{ color: 'rgba(225,224,204,0.2)' }}>
-              In progress
-            </span>
-          )}
+          <div className="flex items-center gap-4">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1.5 text-[11px] no-underline transition-all duration-200 hover:gap-2.5"
+                style={{ color: 'rgba(225,224,204,0.45)' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.45)')}
+              >
+                Visit site
+                <ExternalLink size={11} />
+              </a>
+            )}
+
+            {project.processData ? (
+              <button
+                onClick={onViewProject}
+                className="flex items-center gap-1.5 text-[11px] transition-all duration-200 group-hover:gap-2.5 bg-transparent border-none cursor-pointer p-0"
+                style={{ color: 'rgba(225,224,204,0.45)' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225,224,204,0.45)')}
+              >
+                View project
+                <ArrowRight size={11} style={{ transform: 'rotate(-45deg)' }} />
+              </button>
+            ) : !project.link ? (
+              <span className="text-[10px] tracking-widest italic" style={{ color: 'rgba(225,224,204,0.2)' }}>
+                In progress
+              </span>
+            ) : null}
+          </div>
         </div>
       </div>
     </motion.div>
