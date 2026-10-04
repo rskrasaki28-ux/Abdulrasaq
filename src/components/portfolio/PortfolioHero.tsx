@@ -73,7 +73,7 @@ export default function PortfolioHero() {
               className="m-0 text-xs sm:text-sm md:text-base max-w-[280px] sm:max-w-xs leading-[1.5]"
               style={{ color: 'rgba(225,224,204,0.6)' }}
             >
-              Building automation systems that eliminate manual work and help teams scale smarter.
+              Building automation systems that cut manual work by up to 70% and help teams scale smarter. Remote-proven across US and EU teams.
             </motion.p>
 
             <div className="flex items-center gap-3">

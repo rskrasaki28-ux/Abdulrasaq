@@ -323,6 +323,61 @@ const PROJECTS: Project[] = [
   },
   {
     id: '05',
+    name: 'GrantFlow',
+    company: 'Independent',
+    tagline: 'Grant procurement and compliance, tracked end to end.',
+    description: `Organizations chasing grant funding were tracking opportunities and compliance deadlines by hand, across spreadsheets and email. I built a system that discovers, scores, and tracks grant and funding opportunities for an organization end to end, keeping it compliant through the full funding lifecycle. The data model is multi-tenant-ready from day one, so the single-org tool can later be offered as SaaS without a rebuild.`,
+    stack: ['Next.js 16', 'React 19', 'TypeScript', 'Prisma'],
+    year: '2026',
+    gradient: 'from-[#0a1f0e] via-[#071508] to-[#040e04]',
+    accentColor: '#4ade80',
+    processData: {
+      asIs: {
+        summary: 'Grant opportunities and their compliance deadlines were tracked manually, so organizations missed funding windows and risked falling out of compliance without noticing.',
+        steps: [
+          { label: 'Staff manually search for grant and funding listings', pain: 'Opportunities missed or found too late to apply' },
+          { label: 'Deadlines and requirements tracked in spreadsheets', pain: 'No single source of truth — compliance risk goes unnoticed' },
+        ],
+      },
+      toBe: {
+        summary: 'The system now discovers and scores opportunities automatically and tracks every compliance deadline in one place, built on a data model ready to scale to multiple organizations.',
+        steps: [
+          { label: 'System auto-discovers and scores new opportunities', gain: 'Nothing is missed — every listing is captured and ranked' },
+          { label: 'Compliance deadlines tracked centrally through the funding lifecycle', gain: 'Full visibility — no silent compliance risk' },
+        ],
+      },
+    },
+  },
+  {
+    id: '06',
+    name: 'Greenerpasture',
+    company: 'Independent',
+    tagline: 'An automated pipeline for finding and applying to visa-sponsoring jobs.',
+    description: `Searching for visa-sponsoring roles meant manually checking dozens of career pages and RSS feeds every day. I built a self-running pipeline that scrapes visa-sponsoring job listings, scores each one against a candidate profile with an LLM, and drafts tailored applications automatically — turning a manual job search into a managed pipeline.`,
+    stack: ['Python', 'LLM Scoring (Llama 3.3)', 'SQLite'],
+    year: '2026',
+    gradient: 'from-[#1a1400] via-[#120d00] to-[#070500]',
+    accentColor: '#facc15',
+    processData: {
+      asIs: {
+        summary: 'Finding visa-sponsoring roles required manually checking many career pages and feeds every day, then writing each application from scratch.',
+        steps: [
+          { label: 'Manually check career pages and RSS feeds daily', pain: 'Hours spent searching, many listings missed entirely' },
+          { label: 'Manually assess fit and write each application', pain: 'Slow, repetitive, and inconsistent application quality' },
+        ],
+      },
+      toBe: {
+        summary: 'The pipeline now discovers, scores, and drafts applications for visa-sponsoring roles automatically, running unattended end to end.',
+        steps: [
+          { label: 'Pipeline scrapes listings from feeds and career pages', gain: '100% coverage — nothing missed, zero manual searching' },
+          { label: 'LLM scores each listing against the candidate profile', gain: 'Consistent, objective fit scoring in seconds' },
+          { label: 'Tailored application drafted automatically', gain: 'Ready-to-send applications, no manual writing required' },
+        ],
+      },
+    },
+  },
+  {
+    id: '07',
     name: 'Multi-Tenant AI Chat Platform',
     company: 'Independent',
     tagline: 'A team chat app with isolated workspaces, built from scratch.',
@@ -351,7 +406,7 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    id: '06',
+    id: '08',
     name: 'Telegas Multi-Site Platform',
     company: 'Telegas',
     tagline: 'Five branded sites, one client, one coordinated deployment pipeline.',
@@ -376,6 +431,71 @@ const PROJECTS: Project[] = [
         ],
       },
     },
+  },
+  {
+    id: '09',
+    name: 'AI Lead Generator & Enrichment Tool',
+    company: 'Independent',
+    tagline: 'Automated lead sourcing and CRM enrichment, built in Python.',
+    description: `Sales teams were manually researching and entering lead data into the CRM one contact at a time. I built a Python pipeline that sources leads automatically and enriches each record before it ever reaches a rep, so the CRM stays current without manual data entry.`,
+    stack: ['Python', 'CRM Integration', 'Lead Enrichment'],
+    year: '2025',
+    gradient: 'from-[#1f0a1a] via-[#150712] to-[#0e040b]',
+    accentColor: '#e879f9',
+    processData: {
+      asIs: {
+        summary: 'Leads were sourced and entered into the CRM by hand, one at a time, with enrichment data gathered manually from separate tools.',
+        steps: [
+          { label: 'Rep manually searches for and copies lead data', pain: 'Hours spent per batch, inconsistent data quality' },
+          { label: 'Rep manually enriches each record before outreach', pain: 'Enrichment skipped under time pressure' },
+        ],
+      },
+      toBe: {
+        summary: 'Leads are sourced and enriched automatically before they reach a rep, keeping the CRM current with zero manual research.',
+        steps: [
+          { label: 'Pipeline sources new leads automatically', gain: 'Consistent lead flow with no manual searching' },
+          { label: 'Each record auto-enriched before it hits the CRM', gain: 'Reps get complete, ready-to-use records every time' },
+        ],
+      },
+    },
+  },
+  {
+    id: '10',
+    name: 'Pure Box Water',
+    company: 'Client',
+    tagline: 'A full e-commerce rebuild, migrated off WordPress.',
+    description: `The client's WordPress site was slow and difficult to maintain. I rebuilt the full e-commerce storefront on a modern stack, migrating all existing content and products over to a faster, more maintainable platform.`,
+    stack: ['Next.js', 'TypeScript', 'Tailwind'],
+    year: '2025',
+    gradient: 'from-[#001a14] via-[#000f0c] to-[#000706]',
+    accentColor: '#2dd4bf',
+    processData: {
+      asIs: {
+        summary: 'The storefront ran on an aging WordPress setup that was slow to load and difficult to update without breaking something.',
+        steps: [
+          { label: 'Site runs on legacy WordPress theme and plugins', pain: 'Slow load times, fragile to update' },
+          { label: 'Content and products managed through WordPress admin', pain: 'Limited flexibility for new features' },
+        ],
+      },
+      toBe: {
+        summary: 'The storefront now runs on a modern, fast, maintainable stack with all content and products migrated over cleanly.',
+        steps: [
+          { label: 'Rebuilt as a modern Next.js storefront', gain: 'Faster load times, easier to extend' },
+          { label: 'All content and products migrated over', gain: 'No data loss, clean cutover from the old site' },
+        ],
+      },
+    },
+  },
+  {
+    id: '11',
+    name: 'Internship Application System',
+    company: 'Sports Media Inc.',
+    tagline: 'Internal tooling for application intake and staff operations.',
+    description: `The team needed a dedicated system for intake and tracking of internship applications, separate from general HR tooling. I built the internal application portal and connected staff operations tooling around it.`,
+    stack: ['Internal Tooling', 'Application Intake'],
+    year: '2024',
+    gradient: 'from-[#1a0d00] via-[#120900] to-[#070400]',
+    accentColor: '#fb923c',
   },
 ];
 

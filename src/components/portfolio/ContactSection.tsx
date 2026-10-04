@@ -263,7 +263,7 @@ export default function ContactSection() {
               style={{ background: '#2acd8a', boxShadow: '0 0 6px #2acd8a88' }}
             />
             <span className="text-xs tracking-wide" style={{ color: 'rgba(225,224,204,0.55)' }}>
-              Available for <span style={{ color: '#E1E0CC' }}>contract</span> and <span style={{ color: '#E1E0CC' }}>full-time</span> roles
+              Available now for <span style={{ color: '#E1E0CC' }}>contract</span> and <span style={{ color: '#E1E0CC' }}>full-time</span> roles, remote. Usually replies within 24 hours.
             </span>
           </div>
 
