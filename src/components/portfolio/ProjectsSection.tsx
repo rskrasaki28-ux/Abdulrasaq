@@ -2,6 +2,10 @@ import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { ProcessDiagramModal, type ProcessData } from './ProcessDiagramModal';
+import dakdanLogo from '../../assets/logos/dakdan.png';
+import grantflowLogo from '../../assets/logos/grantflow.png';
+import brandmanagersLogo from '../../assets/logos/brandmanagers.png';
+import dakdanAcademyLogo from '../../assets/logos/dakdan-academy.png';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -19,6 +23,7 @@ interface Project {
   stat?: { value: string; label: string };
   processData?: ProcessData;
   link?: string;
+  logo?: string;
 }
 
 const PROJECTS: Project[] = [
@@ -33,6 +38,7 @@ const PROJECTS: Project[] = [
     gradient: 'from-[#0b1a2e] via-[#091422] to-[#050d18]',
     accentColor: '#4a8cff',
     link: 'https://dakdan.ai',
+    logo: dakdanLogo,
     processData: {
       asIs: {
         summary: 'The team manually monitored portals every morning, wrote proposals from scratch over multiple days, and lost winnable contracts simply because there were not enough hours.',
@@ -187,6 +193,7 @@ const PROJECTS: Project[] = [
     gradient: 'from-[#1a0a0e] via-[#120007] to-[#080003]',
     accentColor: '#f43f5e',
     link: 'https://crm.usaev.net',
+    logo: dakdanLogo,
     processData: {
       asIs: {
         summary: 'Leads were sourced and entered into the CRM by hand, one at a time, with enrichment data gathered manually from separate tools.',
@@ -287,6 +294,7 @@ const PROJECTS: Project[] = [
     gradient: 'from-[#0a1f0e] via-[#071508] to-[#040e04]',
     accentColor: '#4ade80',
     link: 'https://grantrt.com',
+    logo: grantflowLogo,
     processData: {
       asIs: {
         summary: 'Grant opportunities and their compliance deadlines were tracked manually, so organizations missed funding windows and risked falling out of compliance without noticing.',
@@ -437,6 +445,7 @@ const PROJECTS: Project[] = [
     gradient: 'from-[#1a140a] via-[#120d07] to-[#0a0704]',
     accentColor: '#eab308',
     link: 'https://brandmanagers.ai',
+    logo: brandmanagersLogo,
   },
   {
     id: '12',
@@ -449,6 +458,7 @@ const PROJECTS: Project[] = [
     gradient: 'from-[#0a1420] via-[#070d16] to-[#04070b]',
     accentColor: '#38bdf8',
     link: 'https://academy.dakdan.com',
+    logo: dakdanAcademyLogo,
   },
 ];
 
@@ -507,7 +517,16 @@ function ProjectCard({
           </div>
         )}
 
-        {!project.stat && (
+        {!project.stat && project.logo && (
+          <div
+            className="self-end rounded-lg flex items-center justify-center p-2"
+            style={{ background: 'rgba(255,255,255,0.92)', width: 56, height: 56 }}
+          >
+            <img src={project.logo} alt={`${project.company} logo`} className="w-full h-full object-contain" />
+          </div>
+        )}
+
+        {!project.stat && !project.logo && (
           <span className="text-xs font-medium tracking-wider self-end" style={{ color: 'rgba(255,255,255,0.2)' }}>
             {project.id}
           </span>
