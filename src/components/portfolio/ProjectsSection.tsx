@@ -321,6 +321,62 @@ const PROJECTS: Project[] = [
       },
     },
   },
+  {
+    id: '05',
+    name: 'Multi-Tenant AI Chat Platform',
+    company: 'Independent',
+    tagline: 'A team chat app with isolated workspaces, built from scratch.',
+    description: `Teams needed a Slack-style place to collaborate with an AI assistant, but without sharing data across organizations. I built a multi-tenant chat application with email/password auth, workspaces with members and invites, and persistent streaming chat threads scoped per workspace.`,
+    stack: ['Next.js', 'Prisma', 'Supabase', 'LLM API Integration'],
+    year: '2026',
+    gradient: 'from-[#180a2e] via-[#120722] to-[#080312]',
+    accentColor: '#9b6dff',
+    processData: {
+      asIs: {
+        summary: 'Before this build, there was no self-hosted option for teams that wanted an AI chat workspace with proper multi-tenant isolation between organizations.',
+        steps: [
+          { label: 'Define data model for users, orgs, and memberships', pain: 'No existing schema supported isolated multi-org access' },
+          { label: 'Design session and auth layer from scratch', pain: 'Needed secure, stateless auth without an off-the-shelf provider' },
+          { label: 'Build chat thread persistence and streaming', pain: 'Streaming responses needed to survive page reloads mid-stream' },
+        ],
+      },
+      toBe: {
+        summary: 'A working multi-tenant chat platform where any team can sign up, create a workspace, invite members, and run persistent AI-assisted chat threads scoped to their org.',
+        steps: [
+          { label: 'User signs up and lands in a personal workspace', gain: 'Zero setup friction — ready to use immediately' },
+          { label: 'Org owner invites teammates by email', gain: 'Simple, self-service team onboarding' },
+          { label: 'Chat threads stream and persist per workspace', gain: 'Full conversation history, isolated per organization' },
+        ],
+      },
+    },
+  },
+  {
+    id: '06',
+    name: 'Telegas Multi-Site Platform',
+    company: 'Telegas',
+    tagline: 'Five branded sites, one client, one coordinated deployment pipeline.',
+    description: `Telegas needed a family of branded web properties (corporate, news, tech, and TV) launched together under one coordinated build and deployment process. I built and deployed all five sites from a shared pipeline, keeping each brand distinct while avoiding duplicated setup work.`,
+    stack: ['Web Deployment', 'Multi-Site Architecture'],
+    year: '2025',
+    gradient: 'from-[#001a1a] via-[#000f0f] to-[#000707]',
+    accentColor: '#22d3ee',
+    processData: {
+      asIs: {
+        summary: 'Each branded site would normally be set up, built, and deployed independently, multiplying setup time and the chance of configuration drift between them.',
+        steps: [
+          { label: 'Each site built and configured separately', pain: 'Repeated setup work across five separate codebases' },
+          { label: 'Each site deployed through its own process', pain: 'No shared pipeline — inconsistent deploy steps per site' },
+        ],
+      },
+      toBe: {
+        summary: 'All five branded sites now build and deploy through one coordinated pipeline, keeping each brand visually distinct while sharing infrastructure.',
+        steps: [
+          { label: 'Shared pipeline builds all five sites', gain: 'One process instead of five — faster, more consistent releases' },
+          { label: 'Each site deploys independently from the shared base', gain: 'Brand-specific content stays isolated, infra stays shared' },
+        ],
+      },
+    },
+  },
 ];
 
 /* ─── Project card ────────────────────────────────────────────── */
