@@ -8,8 +8,8 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 export type FlowStep = {
   label: string;
   sub?: string;
-  pain?: string;   // red warning badge — As-Is pain points
-  gain?: string;   // accent-coloured badge — To-Be improvements
+  pain?: string;   // red warning badge, As-Is pain points
+  gain?: string;   // accent-coloured badge, To-Be improvements
 };
 
 export type ProcessData = {
@@ -187,7 +187,7 @@ export function ProcessDiagramModal({
           {current.summary}
         </p>
 
-        {/* ── Flow — scrollable */}
+        {/* Flow, scrollable */}
         <div
           className="px-5 sm:px-6 pb-7 pt-5 overflow-y-auto flex-1"
           style={{ scrollbarWidth: 'none' }}

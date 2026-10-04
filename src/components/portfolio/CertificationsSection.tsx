@@ -42,7 +42,7 @@ const CERTIFICATES = [
 const TESTIMONIALS = [
   {
     id: 't1',
-    quote: `Abdulrasaq built an automation pipeline that completely transformed how we handle government bids. We went from manually managing every proposal to a fully autonomous system — the results were immediate and the quality never dropped.`,
+    quote: `Abdulrasaq built an automation pipeline that completely transformed how we handle government bids. We went from manually managing every proposal to a fully autonomous system. The results were immediate and the quality never dropped.`,
     name: 'Operations Lead',
     role: 'Senior Director of Operations',
     company: 'Dakdan Worldwide',
@@ -50,7 +50,7 @@ const TESTIMONIALS = [
   },
   {
     id: 't2',
-    quote: `The intern onboarding workflow Abdulrasaq built saved our HR team hours every single week. What used to take days of back-and-forth now runs itself. That 70% workload reduction was not an estimate — we measured it.`,
+    quote: `The intern onboarding workflow Abdulrasaq built saved our HR team hours every single week. What used to take days of back-and-forth now runs itself. That 70% workload reduction was not an estimate, we measured it.`,
     name: 'HR Manager',
     role: 'Head of People & Culture',
     company: 'Sports Media Inc.',
@@ -58,7 +58,7 @@ const TESTIMONIALS = [
   },
   {
     id: 't3',
-    quote: `He doesn't just build automations — he maps your entire process first, finds the friction points you didn't even know existed, and then builds something that actually holds up at scale. Rare combination of skills.`,
+    quote: `He doesn't just build automations. He maps your entire process first, finds the friction points you didn't even know existed, and then builds something that actually holds up at scale. Rare combination of skills.`,
     name: 'Product Lead',
     role: 'Head of Product',
     company: 'Sports Media Inc.',
@@ -215,7 +215,7 @@ function CertCard({ cert }: { cert: typeof CERTIFICATES[0] }) {
       >
         {/* ── Top face */}
         {cert.image ? (
-          /* Thumbnail — clickable to open lightbox */
+          /* Thumbnail, clickable to open lightbox */
           <div
             className="relative group overflow-hidden cursor-zoom-in"
             style={{ height: '160px' }}

@@ -24,10 +24,10 @@ export default function PortfolioHero() {
         {/* Noise overlay */}
         <div className="noise-overlay absolute inset-0 opacity-[0.65] mix-blend-overlay pointer-events-none z-10" />
 
-        {/* Gradient — heavy at bottom */}
+        {/* Gradient, heavy at bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/85 z-10" />
 
-        {/* Main content — bottom-anchored */}
+        {/* Main content, bottom-anchored */}
         <div className="absolute bottom-0 left-0 right-0 z-20 p-5 sm:p-8 md:p-10 lg:p-14">
 
           {/* Label */}

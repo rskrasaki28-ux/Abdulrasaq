@@ -17,12 +17,12 @@ const HOBBIES: Hobby[] = [
   {
     icon: Settings,
     name: 'Systems Thinking',
-    desc: 'Mapping how processes connect — and finding the one change that fixes ten problems.',
+    desc: 'Mapping how processes connect, and finding the one change that fixes ten problems.',
   },
   {
     icon: BsController,
     name: 'Video Games',
-    desc: 'Strategy, open-world exploration, and competitive play — always looking for the optimal path.',
+    desc: 'Strategy, open-world exploration, and competitive play, always looking for the optimal path.',
   },
   {
     icon: BsTvFill,
@@ -37,7 +37,7 @@ const HOBBIES: Hobby[] = [
   {
     icon: GiSoccerKick,
     name: 'Football',
-    desc: 'I play as a Number 10 — reading the game, finding pockets of space, and distributing passes with precision.',
+    desc: 'I play as a Number 10, reading the game, finding pockets of space, and distributing passes with precision.',
   },
   {
     icon: GiPerfumeBottle,
@@ -114,13 +114,13 @@ export default function HobbiesSection() {
               className="flex flex-col gap-4"
             >
               <p className="text-sm sm:text-base leading-[1.75] m-0" style={{ color: 'rgba(225,224,204,0.65)' }}>
-                I'm <strong style={{ color: '#E1E0CC', fontWeight: 600 }}>Abdulrasaq Agboluaje</strong> — a Business Automation Manager based in Lagos, currently working remote, full-time, for teams in Colorado and Dublin. Distributed collaboration isn't something I'm hoping to do, it's what I already do every day.
+                I'm <strong style={{ color: '#E1E0CC', fontWeight: 600 }}>Abdulrasaq Agboluaje</strong>, a Business Automation Manager based in Lagos, currently working remote, full-time, for teams in Colorado and Dublin. Distributed collaboration isn't something I'm hoping to do, it's what I already do every day.
               </p>
               <p className="text-sm sm:text-base leading-[1.75] m-0" style={{ color: 'rgba(225,224,204,0.65)' }}>
-                I specialise in process analysis, systems integration, and end-to-end automation — bridging the gap between how teams work today and how they should work tomorrow. The pipeline behind this site's Projects section runs the same way: no manual steps, no missed handoffs.
+                I specialise in process analysis, systems integration, and end-to-end automation, bridging the gap between how teams work today and how they should work tomorrow. The pipeline behind this site's Projects section runs the same way: no manual steps, no missed handoffs.
               </p>
               <p className="text-sm sm:text-base leading-[1.75] m-0" style={{ color: 'rgba(225,224,204,0.65)' }}>
-                When I'm not redesigning a workflow, I'm studying systems — whether that's in sport, business, or everyday life. I believe the best automation is invisible: the work gets done, and no one has to think about how.
+                When I'm not redesigning a workflow, I'm studying systems, whether that's in sport, business, or everyday life. I believe the best automation is invisible: the work gets done, and no one has to think about how.
               </p>
             </motion.div>
 

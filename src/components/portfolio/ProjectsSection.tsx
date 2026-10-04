@@ -4,8 +4,6 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 import { ProcessDiagramModal, type ProcessData } from './ProcessDiagramModal';
 import dakdanLogo from '../../assets/logos/dakdan.png';
 import grantflowLogo from '../../assets/logos/grantflow.png';
-import brandmanagersLogo from '../../assets/logos/brandmanagers.png';
-import dakdanAcademyLogo from '../../assets/logos/dakdan-academy.png';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -32,8 +30,8 @@ const PROJECTS: Project[] = [
     name: 'Dakdan Bid Pipeline',
     company: 'Dakdan Worldwide',
     tagline: 'Autonomous bid scanning & proposal generation for a 16-division federal contractor.',
-    description: `The team was losing winnable government contracts not from lack of capability, but lack of hours. I built a fully serverless pipeline that scans live procurement portals twice daily, scores opportunities against each division's capabilities, generates AI-written proposals, and delivers them for one-click approval — without manual input.`,
-    stack: ['Node.js', 'Claude AI', 'Supabase', 'Serverless', 'Vercel'],
+    description: `The team was losing winnable government contracts not from lack of capability, but lack of hours. I built a fully serverless pipeline that scans live procurement portals twice daily, scores opportunities against each division's capabilities, generates AI-written proposals, and delivers them for one-click approval, without manual input.`,
+    stack: ['Node.js', 'LLM Integration', 'Supabase', 'Serverless', 'Vercel'],
     year: '2026',
     gradient: 'from-[#0b1a2e] via-[#091422] to-[#050d18]',
     accentColor: '#4a8cff',
@@ -44,8 +42,8 @@ const PROJECTS: Project[] = [
         summary: 'The team manually monitored portals every morning, wrote proposals from scratch over multiple days, and lost winnable contracts simply because there were not enough hours.',
         steps: [
           {
-            label: 'Work day begins — team starts portal checks',
-            pain: '1–2 hours of manual portal monitoring every morning',
+            label: 'Work day begins: team starts portal checks',
+            pain: '1-2 hours of manual portal monitoring every morning',
           },
           {
             label: 'Manually scan each procurement portal for listings',
@@ -53,32 +51,32 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'Manually evaluate each listing for division relevance',
-            pain: 'Subjective, inconsistent scoring — no shared criteria',
+            pain: 'Subjective, inconsistent scoring, no shared criteria',
           },
           {
             label: 'Write proposal from scratch for qualified bids',
-            pain: '3–5 days per proposal — limited team capacity',
+            pain: '3-5 days per proposal, limited team capacity',
           },
           {
             label: 'Submit draft to manager for review & approval',
             pain: 'Bottlenecks cause missed submission deadlines',
           },
           {
-            label: 'Contracts won — or lost due to capacity limits',
+            label: 'Contracts won, or lost due to capacity limits',
             pain: 'Winnable bids missed, not from lack of skill',
           },
         ],
       },
       toBe: {
-        summary: 'A fully serverless pipeline now scans every portal twice daily, scores bids with AI, generates full proposals automatically, and delivers them for one-click approval — zero manual input.',
+        summary: 'A fully serverless pipeline now scans every portal twice daily, scores bids with AI, generates full proposals automatically, and delivers them for one-click approval. Zero manual input.',
         steps: [
           {
             label: 'Scheduled trigger fires at 6 AM and 6 PM',
-            gain: 'Zero manual effort — cycle starts automatically',
+            gain: 'Zero manual effort, cycle starts automatically',
           },
           {
             label: 'Pipeline auto-scans all procurement portals',
-            gain: '100% portal coverage — every listing captured',
+            gain: '100% portal coverage, every listing captured',
           },
           {
             label: 'AI scores each bid against division capabilities',
@@ -88,8 +86,8 @@ const PROJECTS: Project[] = [
             label: 'Low-scoring opportunities filtered out automatically',
           },
           {
-            label: 'Claude AI generates a full proposal draft',
-            gain: 'Proposal ready in minutes — not days',
+            label: 'LLM generates a full proposal draft',
+            gain: 'Proposal ready in minutes, not days',
           },
           {
             label: 'Manager receives one-click review notification',
@@ -97,7 +95,7 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'Approved proposal auto-submitted to portal',
-            gain: 'More contracts won — zero manual input',
+            gain: 'More contracts won, zero manual input',
           },
         ],
       },
@@ -107,7 +105,7 @@ const PROJECTS: Project[] = [
     id: '02',
     name: 'Intern Onboarding Workflow',
     company: 'Sports Media Inc.',
-    tagline: 'End-to-end applicant onboarding automation — from first application to final stage.',
+    tagline: 'End-to-end applicant onboarding automation, from first application to final stage.',
     description: `HR was manually managing every step of the onboarding pipeline: collecting applications, chasing documents, scheduling interviews, and triggering stage progressions. I designed and built a workflow automation solution that handled each stage automatically, removing the need for manual intervention and freeing the HR team to focus on people, not paperwork.`,
     stack: ['Workflow Automation', 'CRM Integration', 'Process Design', 'Salesforce'],
     year: '2024',
@@ -116,11 +114,11 @@ const PROJECTS: Project[] = [
     stat: { value: '70%', label: 'HR workload reduced' },
     processData: {
       asIs: {
-        summary: 'HR manually managed every touchpoint — chasing documents, scheduling interviews, updating records — consuming the majority of the team\'s time on admin instead of people.',
+        summary: 'HR manually managed every touchpoint: chasing documents, scheduling interviews, updating records, consuming the majority of the team\'s time on admin instead of people.',
         steps: [
           {
             label: 'Applicant submits application via email or form',
-            pain: 'No central intake — applications get lost or delayed',
+            pain: 'No central intake, applications get lost or delayed',
           },
           {
             label: 'HR manually reviews and acknowledges receipt',
@@ -140,7 +138,7 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'HR manually creates record in Salesforce',
-            pain: 'Hours of data entry — repeated for every applicant',
+            pain: 'Hours of data entry, repeated for every applicant',
           },
           {
             label: 'New intern manually set up in internal systems',
@@ -149,18 +147,18 @@ const PROJECTS: Project[] = [
         ],
       },
       toBe: {
-        summary: 'Every stage from intake to onboarding now runs automatically — the system chases documents, books interviews, and updates records without a single manual step.',
+        summary: 'Every stage from intake to onboarding now runs automatically: the system chases documents, books interviews, and updates records without a single manual step.',
         steps: [
           {
             label: 'Applicant submits application',
           },
           {
             label: 'CRM auto-creates and categorises applicant record',
-            gain: 'Centralised intake — nothing slips through',
+            gain: 'Centralised intake, nothing slips through',
           },
           {
             label: 'Automated document request sequence triggered',
-            gain: 'System follows up automatically — no chasing needed',
+            gain: 'System follows up automatically, no chasing needed',
           },
           {
             label: 'Interview auto-scheduled via calendar integration',
@@ -172,11 +170,11 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'Salesforce record auto-updated at each stage',
-            gain: 'Real-time pipeline visibility — zero data entry',
+            gain: 'Real-time pipeline visibility, zero data entry',
           },
           {
             label: 'Onboarding access and tasks auto-provisioned',
-            gain: '70% workload reduced — HR focuses on people',
+            gain: '70% workload reduced, HR focuses on people',
           },
         ],
       },
@@ -216,14 +214,14 @@ const PROJECTS: Project[] = [
     name: 'Athlete App × POD Store',
     company: 'Independent',
     tagline: 'Zero-touch merchandise fulfilment between an athlete platform and a POD store.',
-    description: `Every order previously required manual data entry across two disconnected platforms. I built a Next.js integration layer that connects the athlete app directly into Printful's print-on-demand API, carrying the correct product, size, and shipping data on every purchase trigger — with fulfilment status syncing back automatically.`,
+    description: `Every order previously required manual data entry across two disconnected platforms. I built a Next.js integration layer that connects the athlete app directly into Printful's print-on-demand API, carrying the correct product, size, and shipping data on every purchase trigger, with fulfilment status syncing back automatically.`,
     stack: ['Next.js', 'Printful API', 'Workflow Automation', 'Webhooks'],
     year: '2025',
     gradient: 'from-[#0a1f18] via-[#071510] to-[#040e09]',
     accentColor: '#2acd8a',
     processData: {
       asIs: {
-        summary: 'Every merchandise order required staff to manually copy data between two disconnected platforms — a process prone to errors, missed orders, and customer delays.',
+        summary: 'Every merchandise order required staff to manually copy data between two disconnected platforms, a process prone to errors, missed orders, and customer delays.',
         steps: [
           {
             label: 'Customer places merchandise order in athlete app',
@@ -234,7 +232,7 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'Staff manually copies order details by hand',
-            pain: 'Copy errors — wrong size, product or shipping address',
+            pain: 'Copy errors, wrong size, product or shipping address',
           },
           {
             label: 'Staff manually enters data into POD store system',
@@ -245,7 +243,7 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'Staff manually checks fulfilment status in POD',
-            pain: 'No real-time visibility — customers left waiting',
+            pain: 'No real-time visibility, customers left waiting',
           },
           {
             label: 'Status manually updated in athlete app',
@@ -254,14 +252,14 @@ const PROJECTS: Project[] = [
         ],
       },
       toBe: {
-        summary: 'A webhook-based automation layer now connects both platforms — purchase triggers fire instantly, order data transfers error-free, and fulfilment status syncs back automatically to the athlete app.',
+        summary: 'A webhook-based automation layer now connects both platforms: purchase triggers fire instantly, order data transfers error-free, and fulfilment status syncs back automatically to the athlete app.',
         steps: [
           {
             label: 'Customer places merchandise order in athlete app',
           },
           {
             label: 'Purchase trigger fires instantly via webhook',
-            gain: 'Zero human involvement — instant processing',
+            gain: 'Zero human involvement, instant processing',
           },
           {
             label: 'Product, size & shipping data passed to POD store',
@@ -277,7 +275,7 @@ const PROJECTS: Project[] = [
           },
           {
             label: 'Zero-touch fulfilment complete',
-            gain: 'Flawless every time — at any hour, without staff',
+            gain: 'Flawless every time, at any hour, without staff',
           },
         ],
       },
@@ -300,14 +298,14 @@ const PROJECTS: Project[] = [
         summary: 'Grant opportunities and their compliance deadlines were tracked manually, so organizations missed funding windows and risked falling out of compliance without noticing.',
         steps: [
           { label: 'Staff manually search for grant and funding listings', pain: 'Opportunities missed or found too late to apply' },
-          { label: 'Deadlines and requirements tracked in spreadsheets', pain: 'No single source of truth — compliance risk goes unnoticed' },
+          { label: 'Deadlines and requirements tracked in spreadsheets', pain: 'No single source of truth, compliance risk goes unnoticed' },
         ],
       },
       toBe: {
         summary: 'The system now discovers and scores opportunities automatically and tracks every compliance deadline in one place, built on a data model ready to scale to multiple organizations.',
         steps: [
-          { label: 'System auto-discovers and scores new opportunities', gain: 'Nothing is missed — every listing is captured and ranked' },
-          { label: 'Compliance deadlines tracked centrally through the funding lifecycle', gain: 'Full visibility — no silent compliance risk' },
+          { label: 'System auto-discovers and scores new opportunities', gain: 'Nothing is missed, every listing is captured and ranked' },
+          { label: 'Compliance deadlines tracked centrally through the funding lifecycle', gain: 'Full visibility, no silent compliance risk' },
         ],
       },
     },
@@ -317,7 +315,7 @@ const PROJECTS: Project[] = [
     name: 'Greenerpasture',
     company: 'Independent',
     tagline: 'An automated pipeline for finding and applying to visa-sponsoring jobs.',
-    description: `Searching for visa-sponsoring roles meant manually checking dozens of career pages and RSS feeds every day. I built a self-running pipeline that scrapes visa-sponsoring job listings, scores each one against a candidate profile with an LLM, and drafts tailored applications automatically — turning a manual job search into a managed pipeline.`,
+    description: `Searching for visa-sponsoring roles meant manually checking dozens of career pages and RSS feeds every day. I built a self-running pipeline that scrapes visa-sponsoring job listings, scores each one against a candidate profile with an LLM, and drafts tailored applications automatically, turning a manual job search into a managed pipeline.`,
     stack: ['Python', 'LLM Scoring (Llama 3.3)', 'SQLite'],
     year: '2026',
     gradient: 'from-[#1a1400] via-[#120d00] to-[#070500]',
@@ -333,7 +331,7 @@ const PROJECTS: Project[] = [
       toBe: {
         summary: 'The pipeline now discovers, scores, and drafts applications for visa-sponsoring roles automatically, running unattended end to end.',
         steps: [
-          { label: 'Pipeline scrapes listings from feeds and career pages', gain: '100% coverage — nothing missed, zero manual searching' },
+          { label: 'Pipeline scrapes listings from feeds and career pages', gain: '100% coverage, nothing missed, zero manual searching' },
           { label: 'LLM scores each listing against the candidate profile', gain: 'Consistent, objective fit scoring in seconds' },
           { label: 'Tailored application drafted automatically', gain: 'Ready-to-send applications, no manual writing required' },
         ],
@@ -362,103 +360,12 @@ const PROJECTS: Project[] = [
       toBe: {
         summary: 'A working multi-tenant chat platform where any team can sign up, create a workspace, invite members, and run persistent AI-assisted chat threads scoped to their org.',
         steps: [
-          { label: 'User signs up and lands in a personal workspace', gain: 'Zero setup friction — ready to use immediately' },
+          { label: 'User signs up and lands in a personal workspace', gain: 'Zero setup friction, ready to use immediately' },
           { label: 'Org owner invites teammates by email', gain: 'Simple, self-service team onboarding' },
           { label: 'Chat threads stream and persist per workspace', gain: 'Full conversation history, isolated per organization' },
         ],
       },
     },
-  },
-  {
-    id: '08',
-    name: 'Telegas Multi-Site Platform',
-    company: 'Telegas',
-    tagline: 'Five branded sites, one client, one coordinated deployment pipeline.',
-    description: `Telegas needed a family of branded web properties (corporate, news, tech, and TV) launched together under one coordinated build and deployment process. I built and deployed all five sites from a shared pipeline, keeping each brand distinct while avoiding duplicated setup work.`,
-    stack: ['Web Deployment', 'Multi-Site Architecture'],
-    year: '2025',
-    gradient: 'from-[#001a1a] via-[#000f0f] to-[#000707]',
-    accentColor: '#22d3ee',
-    processData: {
-      asIs: {
-        summary: 'Each branded site would normally be set up, built, and deployed independently, multiplying setup time and the chance of configuration drift between them.',
-        steps: [
-          { label: 'Each site built and configured separately', pain: 'Repeated setup work across five separate codebases' },
-          { label: 'Each site deployed through its own process', pain: 'No shared pipeline — inconsistent deploy steps per site' },
-        ],
-      },
-      toBe: {
-        summary: 'All five branded sites now build and deploy through one coordinated pipeline, keeping each brand visually distinct while sharing infrastructure.',
-        steps: [
-          { label: 'Shared pipeline builds all five sites', gain: 'One process instead of five — faster, more consistent releases' },
-          { label: 'Each site deploys independently from the shared base', gain: 'Brand-specific content stays isolated, infra stays shared' },
-        ],
-      },
-    },
-  },
-  {
-    id: '09',
-    name: 'Pure Box Water',
-    company: 'Client',
-    tagline: 'A full e-commerce rebuild, migrated off WordPress.',
-    description: `The client's WordPress site was slow and difficult to maintain. I rebuilt the full e-commerce storefront on a modern stack, migrating all existing content and products over to a faster, more maintainable platform.`,
-    stack: ['Next.js', 'TypeScript', 'Tailwind'],
-    year: '2025',
-    gradient: 'from-[#001a14] via-[#000f0c] to-[#000706]',
-    accentColor: '#2dd4bf',
-    processData: {
-      asIs: {
-        summary: 'The storefront ran on an aging WordPress setup that was slow to load and difficult to update without breaking something.',
-        steps: [
-          { label: 'Site runs on legacy WordPress theme and plugins', pain: 'Slow load times, fragile to update' },
-          { label: 'Content and products managed through WordPress admin', pain: 'Limited flexibility for new features' },
-        ],
-      },
-      toBe: {
-        summary: 'The storefront now runs on a modern, fast, maintainable stack with all content and products migrated over cleanly.',
-        steps: [
-          { label: 'Rebuilt as a modern Next.js storefront', gain: 'Faster load times, easier to extend' },
-          { label: 'All content and products migrated over', gain: 'No data loss, clean cutover from the old site' },
-        ],
-      },
-    },
-  },
-  {
-    id: '10',
-    name: 'Internship Application System',
-    company: 'Sports Media Inc.',
-    tagline: 'Internal tooling for application intake and staff operations.',
-    description: `The team needed a dedicated system for intake and tracking of internship applications, separate from general HR tooling. I built the internal application portal and connected staff operations tooling around it.`,
-    stack: ['Internal Tooling', 'Application Intake'],
-    year: '2024',
-    gradient: 'from-[#1a0d00] via-[#120900] to-[#070400]',
-    accentColor: '#fb923c',
-  },
-  {
-    id: '11',
-    name: 'Brand Managers',
-    company: 'Independent',
-    tagline: 'A connected learning platform built from one source document per subject.',
-    description: `Brand management training was scattered across disconnected courses, dated textbooks, and separate software. I helped build a platform where every subject starts as a single authoritative source document and generates the full course, a working toolkit (spreadsheets, workbooks, slide decks, prompt packs, exams), and an AI knowledge base indexed to answer only from that source — so a correction in one place propagates through everything downstream.`,
-    stack: ['Web Platform', 'AI-Generated Content', 'Education'],
-    year: '2026',
-    gradient: 'from-[#1a140a] via-[#120d07] to-[#0a0704]',
-    accentColor: '#eab308',
-    link: 'https://brandmanagers.ai',
-    logo: brandmanagersLogo,
-  },
-  {
-    id: '12',
-    name: 'Dakdan Academy',
-    company: 'Dakdan Worldwide',
-    tagline: 'Career training programs that route competitive esports players into high-discipline careers.',
-    description: `Dakdan Academy trains high-performing esports athletes for careers that reward the same reflexes competitive gaming builds — sustained attention, pattern recognition, and calm decisions under pressure. I helped build the training platform and account system behind its first live program, Air Traffic Control, with Emergency Dispatcher and Drone/UAS Pilot tracks following.`,
-    stack: ['Web Platform', 'Account System', 'Training Programs'],
-    year: '2026',
-    gradient: 'from-[#0a1420] via-[#070d16] to-[#04070b]',
-    accentColor: '#38bdf8',
-    link: 'https://academy.dakdan.com',
-    logo: dakdanAcademyLogo,
   },
 ];
 
@@ -664,7 +571,7 @@ export default function ProjectsSection() {
         </div>
       </section>
 
-      {/* Process diagram modal — rendered outside section to avoid transform clipping */}
+      {/* Process diagram modal, rendered outside section to avoid transform clipping */}
       <AnimatePresence>
         {activeProject?.processData && (
           <ProcessDiagramModal

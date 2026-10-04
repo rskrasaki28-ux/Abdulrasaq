@@ -32,7 +32,7 @@ export default function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
-  // Formspree hook — form ID from https://formspree.io/f/mwlveaqy
+  // Formspree hook, form ID from https://formspree.io/f/mwlveaqy
   const [state, handleSubmit, reset] = useForm('mwlveaqy');
 
   return (
@@ -105,7 +105,7 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.18, ease: EASE }}
             className="flex flex-col gap-10 sm:gap-14"
           >
-            {/* Hidden subject line — shows nicely in inbox */}
+            {/* Hidden subject line, shows nicely in inbox */}
             <input type="hidden" name="_subject" value="New enquiry via Abdulrasaq Portfolio" />
 
             {/* ── I'm [name] */}
